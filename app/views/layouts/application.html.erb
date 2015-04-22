@@ -3,12 +3,20 @@
 <head>
   <title>Pos</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">      
+	      <%= link_to 'Live Point of Sale',root_path, class:"navbar-brand" %>
+	    </div>    
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
+		<%= yield %>
+	</div>
 </body>
 </html>
